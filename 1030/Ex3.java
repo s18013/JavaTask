@@ -179,7 +179,7 @@ class Ex3{
             return "夏";
         }else if (a >= 9 && a <= 11){
             return "秋";
-        }else if (a == 12 && a <= 2){
+        }else if (a == 12 || a == 2 || a == 1){
             return "冬";
         }else{
             return "範囲(1～12)外の値です";
