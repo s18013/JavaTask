@@ -48,9 +48,8 @@ class Ex4{
             } else {
                 ret[i] = "零";
             }
-            return ret;
         }
-
+         return ret;
 	}
 
 	public int ex4_4(int a){
@@ -68,8 +67,9 @@ class Ex4{
         for (int i = 1; i <= a; i++){
             sum += i;
         }
+        return sum;
+    }
 
-	}
 
 	public int [] ex4_6(int a){
 
@@ -83,7 +83,7 @@ class Ex4{
 
 		int [] ret = new int[yaku.size()];
 
-        for (int i = 0; i < ret.lenght; i++) {
+        for (int i = 0; i < ret.length; i++) {
             ret[i] = yaku.get(i);
         }
 		return ret;
@@ -91,21 +91,17 @@ class Ex4{
 
 	public boolean ex4_7(int a){
 
-        Scanner sc = new Scanner(a);
-        int n = sc.nextInt();
 
         if (a == 1) {
             return false;
         }
 
-        for (int i = 2; i < n; i++) {
-            if (n % i == 0) {
+        for (int i = 2; i < a; i++) {
+            if (a % i == 0) {
                 return false;
-            }else {
-                return true;
             }
-
         }
+        return true;
 	}
 
 	public int ex4_8(int [] a){
