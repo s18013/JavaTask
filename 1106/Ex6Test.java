@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.junit.Test;
+import org.junit.Ignore;
 
 public class Ex6Test {
 
@@ -157,68 +158,68 @@ public class Ex6Test {
 	public void ex6_7_1(){
 		int [] a = {1, 3, 4, 7, 9, 11};
 		int idx = 2;
-		int [] expected = {1, 3, 7, 9, 11, 11};
-		ex6.ex6_7(a, idx);
-		assertThat(a, is(expected));
+		int [] expected = {1, 3, 7, 9, 11};
+		int [] actual = ex6.ex6_7(a, idx);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_7_2(){
 		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int idx = 0;
-		int [] expected = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10};
-		ex6.ex6_7(a, idx);
-		assertThat(a, is(expected));
+		int [] expected = {2, 3, 4, 5, 6, 7, 8, 9, 10};
+		int [] actual = ex6.ex6_7(a, idx);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_7_3(){
 		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int idx = 9;
-		int [] expected = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-		ex6.ex6_7(a, idx);
-		assertThat(a, is(expected));
+		int [] expected = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+		int [] actual = ex6.ex6_7(a, idx);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_7_4(){
 		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int idx = 1;
-		int [] expected = {1, 3, 4, 5, 6, 7, 8, 9, 10, 10};
-		ex6.ex6_7(a, idx);
-		assertThat(a, is(expected));
+		int [] expected = {1, 3, 4, 5, 6, 7, 8, 9, 10};
+		int [] actual = ex6.ex6_7(a, idx);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_7_5(){
 		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int idx = 8;
-		int [] expected = {1, 2, 3, 4, 5, 6, 7, 8, 10, 10};
-		ex6.ex6_7(a, idx);
-		assertThat(a, is(expected));
+		int [] expected = {1, 2, 3, 4, 5, 6, 7, 8, 10};
+		int [] actual = ex6.ex6_7(a, idx);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_8_1(){
 		int [] a = {1, 3, 4, 7, 9, 11};
 		int idx = 1;
 		int n = 3;
-		int [] expected = {1, 9, 11, 7, 9, 11};
-		ex6.ex6_8(a, idx, n);
-		assertThat(a, is(expected));
+		int [] expected = {1, 9, 11};
+		int [] actual = ex6.ex6_8(a, idx, n);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_8_2(){
 		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int idx = 2;
 		int n = 5;
-		int [] expected = {1, 2, 8, 9, 10, 6, 7, 8, 9, 10};
-		ex6.ex6_8(a, idx, n);
-		assertThat(a, is(expected));
+		int [] expected = {1, 2, 8, 9, 10};
+		int [] actual = ex6.ex6_8(a, idx, n);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_8_3(){
 		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int idx = 0;
 		int n = 9;
-		int [] expected = {10, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-		ex6.ex6_8(a, idx, n);
-		assertThat(a, is(expected));
+		int [] expected = {10};
+		int [] actual = ex6.ex6_8(a, idx, n);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_8_4(){
@@ -226,8 +227,8 @@ public class Ex6Test {
 		int idx = 9;
 		int n = 9;
 		int [] expected = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-		ex6.ex6_8(a, idx, n);
-		assertThat(a, is(expected));
+		int [] actual = ex6.ex6_8(a, idx, n);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_8_5(){
@@ -235,53 +236,53 @@ public class Ex6Test {
 		int idx = 0;
 		int n = 0;
 		int [] expected = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-		ex6.ex6_8(a, idx, n);
-		assertThat(a, is(expected));
+		int [] actual = ex6.ex6_8(a, idx, n);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_9_1(){
 		int [] a = {1, 3, 4, 7, 9, 11};
 		int idx = 2;
 		int x = 99;
-		int [] expected = {1, 3, 99, 4, 7, 9};
-		ex6.ex6_9(a, idx, x);
-		assertThat(a, is(expected));
+		int [] expected = {1, 3, 99, 4, 7, 9, 11};
+		int [] actual = ex6.ex6_9(a, idx, x);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_9_2(){
 		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int idx = 2;
 		int x = 5;
-		int [] expected = {1, 2, 5, 3, 4, 5, 6, 7, 8, 9};
-		ex6.ex6_9(a, idx, x);
-		assertThat(a, is(expected));
+		int [] expected = {1, 2, 5, 3, 4, 5, 6, 7, 8, 9, 10};
+		int [] actual = ex6.ex6_9(a, idx, x);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_9_3(){
 		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int idx = 0;
 		int x = 0;
-		int [] expected = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-		ex6.ex6_9(a, idx, x);
-		assertThat(a, is(expected));
+		int [] expected = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+		int [] actual = ex6.ex6_9(a, idx, x);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_9_4(){
 		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int idx = 9;
 		int x = 9;
-		int [] expected = {1, 2, 3, 4, 5, 6, 7, 8, 9, 9};
-		ex6.ex6_9(a, idx, x);
-		assertThat(a, is(expected));
+		int [] expected = {1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10};
+		int [] actual = ex6.ex6_9(a, idx, x);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_9_5(){
 		int [] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		int idx = 5;
 		int x = 100;
-		int [] expected = {1, 2, 3, 4, 5, 100, 6, 7, 8, 9};
-		ex6.ex6_9(a, idx, x);
-		assertThat(a, is(expected));
+		int [] expected = {1, 2, 3, 4, 5, 100, 6, 7, 8, 9, 10};
+		int [] actual = ex6.ex6_9(a, idx, x);
+		assertThat(actual, is(expected));
 	}
 	@Test
 	public void ex6_10_1(){
