@@ -4,11 +4,7 @@ class Ex6{
 
     public int [] ex6_1(){
 
-<<<<<<< HEAD
         int [] ret = new int[5];
-=======
-        int [] ret = new int[6];
->>>>>>> 6a8d08cc2050d2433e2477134d8d240b9da2f55d
         for (int i = 5; i > 0; i--) {
             ret[5-i] = i;
         }
@@ -47,12 +43,8 @@ class Ex6{
                min = v;
            }
         }
-<<<<<<< HEAD
         float SumFloat = sum;
         float ave = Math.round(SumFloat / a.length);
-=======
-        float ave = Math.round(sum / a.length);
->>>>>>> 6a8d08cc2050d2433e2477134d8d240b9da2f55d
 
         int [] ret = {sum, (int)ave, max, min};
                return ret;
@@ -84,11 +76,7 @@ class Ex6{
 
         int size = a.length;
 
-<<<<<<< HEAD
         if (idx >= 0 && idx < a.length){
-=======
-        if (idx > 0 && idx < a.length){
->>>>>>> 6a8d08cc2050d2433e2477134d8d240b9da2f55d
             size--;
         }
 
@@ -106,7 +94,6 @@ class Ex6{
 
     public int [] ex6_8(int [] a, int idx, int n){
 
-<<<<<<< HEAD
         int size = a.length;
         int sum = idx + n;
 
@@ -125,25 +112,6 @@ class Ex6{
                 ret[b] += a[i];
             }
         }
-=======
-        int [] ret = new int[1];
-//        int size = a.length;
-//
-//        if (a.length >= idx + n){
-//            size -= n;
-//        }
-//        int [] ret = new int[size];
-//
-//        for (int src = 0, dst = 0; src < a.length;){
-//            if (src == idx){
-//                src += n;
-//            ret[dst++] = a[src++];
-//            }else {
-//            ret = a.clone();
-//            }
-//        }
-//
->>>>>>> 6a8d08cc2050d2433e2477134d8d240b9da2f55d
         return ret;
     }
 
@@ -175,8 +143,7 @@ class Ex6{
 
     public int [] ex6_11(int [] a){
 
-        int [] ret = new int[0];
-        return ret;
+        return a;
     }
 
     public int [] ex6_12(int [] a, int x){
