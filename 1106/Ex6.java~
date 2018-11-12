@@ -1,4 +1,4 @@
-import  java.util.*;
+import  java.util.ArrayList;
 
 class Ex6{
 
@@ -137,14 +137,22 @@ class Ex6{
 
     public void ex6_10(int [] a, int [] b){
 
-        int min = Math.min(a.length, b.length);
-        int[] A = a.clone();
-        int[] B = b.clone();
-
-        for(int i = 0; i < min; i++){
-            a[i] = B[i];
-            b[i] = A[i];
+        int max;
+        if (a.length > b.length){
+            max = a.length;
+        }else {
+            max = b.length;
         }
+
+        int [] retA = new int[a.length];
+        int [] retB = new int[b.length];
+
+        for (int i = 0; i < max; i++){
+           retA[i] += b[i];
+           retB[i] += a[i];
+        }
+
+        
 
 
     }
@@ -156,70 +164,28 @@ class Ex6{
 
     public int [] ex6_12(int [] a, int x){
 
-        List<Integer> ret1 = new ArrayList<Integer>();
-
-        for (int i = 0; i < a.length; i++){
-            if (a[i] == x){
-                ret1.add(i);
-            }
-        }
-
-        int [] ret = new int[ret1.size()];
-        for (int z = 0; z < ret1.size(); z++){
-            ret[z] = ret1.get(z);
-        }
+        int [] ret = new int[0];
 
         return ret;
     }
 
     public int [] ex6_13(int [] a, int idx){
 
-        List<Integer> ret1 = new ArrayList<Integer>();
-        for (int i = 0; i < a.length; i++){
-            if (i != idx){
-                ret1.add(a[i]);
-            }
-        }
-
-        int [] ret = new int[ret1.size()];
-        for (int z = 0; z < ret1.size(); z++){
-            ret[z] = ret1.get(z);
-        }
+        int [] ret = new int[0];
 
         return ret;
     }
 
     public int [] ex6_14(int [] a, int idx, int n){
 
-        List<Integer> ret1 = new ArrayList<Integer>();
-
-        for (int i = 0; i < a.length; i++){
-            if (!(idx <= i && i < idx + n)){
-                ret1.add(a[i]);
-            }
-        }
-
-        int [] ret = new int[ret1.size()];
-        for (int z = 0; z < ret1.size(); z++){
-            ret[z] = ret1.get(z);
-        }
+        int [] ret = new int[0];
 
         return ret;
     }
 
     public int [] ex6_15(int [] a, int idx, int x){
 
-        List<Integer> ret1 = new ArrayList<Integer>();
-
-        for (int i = 0; i < a.length; i++) {
-            ret1.add(a[i]);
-            }
-        ret1.add(idx, x);
-
-        int [] ret = new int[ret1.size()];
-        for (int z = 0; z < ret1.size(); z++){
-            ret[z] = ret1.get(z);
-        }
+        int [] ret = new int[0];
 
         return ret;
     }
